@@ -484,16 +484,13 @@ let movies = [
       }
     ];
 function list(){
-   let filtered = movies.filter((input)=>{
-        if(input.year >= 2000){
-            return input.title
-        };
-    });
-    let title = filtered.map((input)=>{
+    let title = movies.map((input)=>{
         return input.title;
     });
-    let final = title.forEach((input)=>{
-        return input;
+    let final = title.reduce((x, y)=>{
+        document.write(x + "<br/>" + y);
+
     })
-    document.getElementById("nutts").innerHTML = final;
+
+    document.getElementById("nutts").write = final;
 }
