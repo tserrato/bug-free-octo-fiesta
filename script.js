@@ -484,13 +484,9 @@ let movies = [
   }
 ];
 function list() {
-  let title = movies.map((input) => {
-    return input.title;
-  });
-  let final = title.reduce((x, y) => {
-    document.write(x + "<br/>" + y);
-
-
+  console.log('yes');
+  const final = movies.reduce((acc, item) => {
+    return acc + item.title + '<br>', ''
   })
 
   document.getElementById("nutts").innerHTML = final;
