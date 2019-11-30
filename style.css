@@ -1,4 +1,12 @@
 #nutts{
-    width: 100vw;
+    width: 75vw;
     height: 100vh;
+    background-color: #393939;
+    margin: auto;
+    color: white;
+    text-align: center;
+}
+body{
+    background-image:url(texture-2382763_960_720.jpg);
+    
 }
