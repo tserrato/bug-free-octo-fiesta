@@ -483,11 +483,30 @@ let movies = [
     "rate": 8.5
   }
 ];
-function list() {
-  console.log('yes');
-  const final = movies.reduce((acc, item) => {
-    return acc + item.title + '<br>', ''
+function list(){
+  let title = movies.map((input)=>{
+      return input.title;
+  });
+  let final = title.reduce((x, y)=>{
+      return (x + "</br>" + y)
+
   })
 
-  document.getElementById("nutts").innerHTML = final;
+ document.getElementById('mainDiv').innerHTML = final;
 }
+/* crime 
+drama
+mystery
+thriller
+war
+comedy
+romance
+biography
+action
+adventure
+fantasy
+family
+sci-fi
+western
+history
+*/
