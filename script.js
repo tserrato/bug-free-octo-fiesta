@@ -483,30 +483,66 @@ let movies = [
     "rate": 8.5
   }
 ];
-function list(){
-  let title = movies.map((input)=>{
-      return input.title;
+function list() {
+  let title = movies.map((input) => {
+    return input.title;
   });
-  let final = title.reduce((x, y)=>{
-      return (x + "</br>" + y)
+  let final = title.reduce((x, y) => {
+    return (x + "</br>" + y)
 
-  })
+  });
 
- document.getElementById('mainDiv').innerHTML = final;
+  document.getElementById('mainDiv').innerHTML = final;
 }
-/* crime 
-drama
-mystery
-thriller
-war
-comedy
-romance
-biography
-action
-adventure
-fantasy
-family
-sci-fi
-western
-history
-*/
+function genreInput(Input) {
+  console.log('yes')
+  return Input
+};
+
+function year() {
+  console.log('Running')
+  let newArray = movies.map((input) => {
+    return {
+      title: input.title,
+      year: input.year
+    }
+  });
+  let filter = newArray.filter((input) => {
+    let x = document.getElementById('yearIn').value;
+    if (input.year >= x) {
+      return input.title
+    }
+  });
+  let array = filter.map((input) => {
+    return input.title
+  })
+  let final = array.reduce((x, y) => {
+    return (x + "</br>" + y)
+
+  });
+  document.getElementById('mainDiv').innerHTML = final;
+}
+
+function genre() {
+  console.log('Running')
+  let newArray = movies.map((input) => {
+    return {
+      title: input.title,
+      genre: input.genre
+    }
+  });
+  let filter = newArray.filter((input) => {
+    let x = document.getElementById('genreIn').value;
+    if (input.genre.includes(x)) {
+      return input.title
+    }
+  });
+  let array = filter.map((input) => {
+    return input.title
+  })
+  let final = array.reduce((x, y) => {
+    return (x + "</br>" + y)
+
+  });
+  document.getElementById('mainDiv').innerHTML = final;
+}

@@ -9,40 +9,25 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
-
 <body onload="list()">
     <div class="title">Movies</div>
     <nav>
+        <div id="help">Clicking Enter On The Input Resets Them <br>
+            Genre Includes: Crime,Thriller,Drama,Mystery,War,Comedy,Romance,Biography,Action,Adventure,Family,Fantasy,Sci-Fi,Western,Hisory
+        </div>
+        <form>
         <div class="dropdown">
             <button class="dropbtn">Year</button>
             <div class="dropdown-content">
-                <input type="text" name="fname" value="">
+                <input type="number" id="yearIn" onkeyup="year()">
             </div>
-            <div class="dropdown">
-                <button class="dropbtn">Rating</button>
-                <div class="dropdown-content">
-                    <input type="text" name="fname" value="">
-
-                </div>
                 <div class="dropdown">
                     <button class="dropbtn">Genre</button>
                     <div class="dropdown-content">
-                        <a href="">Crime</a>
-                        <a href="">Thriller</a>
-                        <a href="">Drama</a>
-                        <a href="">Mystery</a>
-                        <a href="">War</a>
-                        <a href="">Comedy</a>
-                        <a href="">Romance</a>
-                        <a href="">Biography</a>
-                        <a href="">Action</a>
-                        <a href="">Adventure</a>
-                        <a href="">Family</a>
-                        <a href="">Fantasy</a>
-                        <a href="">Sci-Fi</a>
-                        <a href="">Western</a>
-                        <a href="">Hisory</a>
+                            <input type="text" id="genreIn" onkeyup="genre()">
                     </div>
+                    <input type="submit" style="display: none"/>
+                </form>
     </nav>
 
     <div id="mainDiv">
